@@ -1,0 +1,163 @@
+@use '../vars';
+
+.card{
+    &__link{
+        z-index: 10;
+        &__artiste {
+        background-color: #8000806e;
+        border: none;
+        border-radius: 5px;
+        width: 80%;
+        padding: 4px;
+        }
+    }
+
+    &__artistprofil{
+        z-index: 0;
+        position: relative;
+        top: 110px;
+    }
+
+
+    &__username{
+        margin: 0;
+        margin-top: 2px;
+        z-index: 0;
+        position: relative;
+        top: 100px;
+        text-transform: capitalize;
+    }
+
+    &__author{
+        margin: 0;
+        z-index: 0;
+        position: relative;
+        top: 160px;
+    }
+
+    &__artist{
+        position: relative;
+        margin: 1rem 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 15rem;
+        height: 27rem;
+        border:1px solid vars.$primary-text;
+        z-index:0 ;
+
+        &__img{
+            width: 85%;
+            height: 50%;
+            margin-bottom: 0.5rem;
+            position: relative;
+            top: 1rem;
+            object-fit: cover;
+
+        }
+      
+    }
+
+    &__button{
+
+        &__play{
+            width: 3em;
+            align-self: center;
+            background: transparent;
+            border: none;
+            color :vars.$primary-color;
+            margin-bottom:1em;
+            z-index: 0;
+            position: relative;
+            top: 1rem;
+            transition: 0.2s;
+
+            &:hover{
+                transition: 0.2s;
+                color: vars.$primary-text;
+            }
+        }
+
+        &__tag{
+            z-index: 0;
+            position: relative;
+            top: 110px;
+        }
+        
+    
+        
+    }
+
+    &__artistdescription{
+        padding: 0 10px;
+        font-size: 13px;
+        height: 3rem;
+        position: relative;
+        top: 110px;
+        z-index: 0;
+    }
+   
+ 
+}
+
+.box-artist{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    background: vars.$primary-black;
+
+
+
+
+    &::before{
+        content: '';
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        background: #fff;
+        z-index: -4;
+    }
+
+    &::after{
+        content: '';
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        z-index: -5;
+        background: #fff;
+        filter: blur(10px);
+        transition: 0.5s;
+
+    }
+    transition: 0.5s;
+
+
+    &:hover{
+        transition: 0.5s;
+
+        
+        &::before, &::after {
+            background: vars.$primary-color;    
+        }
+
+        &::after{
+            filter: blur(15px);
+        }
+    }
+
+    &::before, &::after {
+        background: linear-gradient(360deg, #272727, vars.$primary-color);
+
+    }
+
+   
+}
+

@@ -1,0 +1,39 @@
+@use '../vars';
+
+.footer{
+    max-width: 100vw;
+    height: 7rem;
+    background: vars.$secondary-black;
+    // position: absolute;
+    // bottom: -8rem;
+    display: flex;
+    justify-content: space-around;
+    align-items:flex-start;
+    padding: 1rem;
+    color: vars.$primary-color;
+    font-weight: 700;
+
+    @media screen and (max-width : 800px) {
+        &__contact, &__aboutus, &__mentions{
+            font-size: 0.6rem;
+        }
+    }
+
+        &__contact{
+            &:hover{
+                color: vars.$primary-link;
+            }
+        }
+
+        &__aboutus{
+            &:hover{
+                color: vars.$primary-link;
+            }
+        }
+
+        &__mentions{
+            &:hover{
+                color: vars.$primary-link;
+            }
+        }
+}

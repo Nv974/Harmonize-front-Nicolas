@@ -1,0 +1,358 @@
+@use '../vars';
+
+.userinfos{
+// width: 90%;
+// display: flex;
+// align-items: center;
+// flex-direction: column;
+
+    &__modifs{
+        &__button{
+            min-width: 10rem;
+            margin: 1rem auto 0 auto;
+            border: none;
+            background: vars.$primary-color;
+            color: vars.$primary-text;
+            border-radius: 15px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.3s;
+            height: 2rem;
+            z-index: 5;
+
+            &--hide{
+                transform: translateX(-2000em);
+            }
+
+            @media screen and (max-width : 640px) {
+                margin: 1rem auto 4rem auto;
+            }
+        }
+    }
+
+    &__profil {
+        width: 50%;
+        color: white;
+        margin: 1rem auto 2rem auto;
+        border-bottom:  3px solid vars.$primary-color;
+        padding-bottom: 2rem;
+
+        &--hide {
+            display: none;
+        }
+
+
+        &__img{
+            width: 10rem;
+            margin: 0.5rem;
+        }
+
+        &__username {
+            margin: 0.5rem;
+            text-transform: capitalize;
+        }
+
+        &__email {
+            margin: 0.5rem;
+        }
+
+        &__description {
+            margin: 0.5rem;
+        }
+    }
+
+    .sign-up{
+        display: flex;
+        animation: to-left 0.6s ease;
+        min-width: 80%;
+
+        input{
+            color: black;
+        }
+
+
+        &__container{
+            height: 60vh;
+            min-width: 80%;
+            padding-top: 0;
+            background: none;
+            
+        }
+        
+
+        &__form {
+            color: white;
+            background-color: transparent;
+            // border: 2px vars.$primary-color solid;
+            border-radius: 1rem;
+            min-width: 80%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 5rem 1rem;
+
+            &__name , &__email, &__description{
+                color: white;
+                min-width: 80%;
+            }
+
+            &__title{
+                min-width: 80%;
+            }
+            
+            &__label-name , &__label-email , &__label-description{
+                min-width: 80%;
+            }
+
+            &__profil{
+                display: flex;
+                flex-direction: row;
+                // flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+
+
+        }
+    }
+
+    .new__project__form{
+        @media screen and (max-width : 900px) {
+            width: 100%;
+
+            label {
+                width: 10rem;
+            }
+
+            input {
+                width: 10rem;
+            }
+        }
+    }
+
+    .new__users__form{
+        margin-top: 1rem;
+        animation: to-left 0.8s ease;
+        color: vars.$primary-text;
+        display : flex;
+        flex-direction: column;
+        min-width: 50%;
+        max-width: 80%;
+
+            @media screen and (max-width : 640px) {
+                margin-top : 3rem
+            }
+
+        label{
+            color: vars.$primary-color;
+            text-align: left;
+            border-bottom: 4px solid black;
+            padding-bottom: 0.3rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+            // width: 9.7rem;
+        }
+
+
+        &__file{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+
+            input{
+                margin-top: 0;
+                min-width: 40%;
+                max-width: 40%;
+                font-size: 1rem;
+
+                @media screen and (max-width : 640px) {
+                    min-width: 100%;
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+
+        &__submit {
+            // width: 10rem;
+            // margin: 1rem auto;
+            border: none;
+            background: vars.$primary-color;
+            color: vars.$primary-text;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.3s;
+            height: 2rem;
+            max-width: 40%;
+            min-width: 40%;
+
+            @media screen and (max-width : 640px) {
+                min-width: 100%;
+            }
+        }
+
+        ::-webkit-file-upload-button{
+            width: 10rem;
+            height: 2rem;
+            border: none;
+            background: vars.$primary-text;
+            color: vars.$primary-color;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: 700;
+            margin-right: 1rem;
+            cursor: pointer;
+            transition: 0.3s;
+
+
+            &:hover{
+                background: vars.$primary-color;
+                color: vars.$primary-text;
+            }
+
+           
+        }
+    }
+
+    &__header{
+        font-size: 1.4rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        background-repeat: no-repeat;
+        background-position: center;
+        padding-top: 10rem;
+        // margin-bottom: 5rem;
+        text-transform: uppercase;
+        // background-color: vars.$secondary-black;
+        background-image: url(../../../src/assets/img/background/old-wrinkled-hands-on-piano.jpg);
+
+        &__title{
+            color: vars.$primary-text;
+            margin-bottom: 10rem;
+            text-decoration: underline;
+            text-decoration-color: vars.$primary-color;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 10px;
+        }
+
+        &__links{
+            padding-bottom: 1rem;
+            
+            &__text{
+                margin: 0 0.5rem;
+                color: vars.$primary-text;
+                font-size: 1.2rem;
+                background: none;
+                border:none;
+                transition: 0.3s;
+                position: relative;
+
+                &:hover{
+                    background-color: vars.$primary-color;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+    &__container{
+        min-height: 50vh;
+        padding-top: 0.5rem;
+        padding-bottom: 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    &__messages{
+        min-height: 50vh;
+        &.messages{
+            animation: to-left 0.8s ease;
+        }
+       
+    }
+    &__projectform{
+        // min-height: 100vh;
+        &__subtitle{
+            color: vars.$primary-text;
+            text-transform: uppercase;
+            margin-bottom: 5rem;
+
+            
+        }
+        &.newProject{
+            animation: to-right 0.7s ease ;
+        }
+    }
+
+    &__projects{
+        margin: auto;
+        // padding-top: 2rem;
+        background-color: vars.$primary-black;
+        // min-height: 100vh;
+        &.myProject{
+            animation: visibilty 0.7s 1 ease;
+        }
+        &__title{
+            color: vars.$primary-text;
+            text-transform: uppercase;
+            margin-top: 3em;
+            margin-bottom: 3em;
+        }
+        &__cards{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: auto;
+            min-width: 90%;
+            color: white;
+
+
+            .card__author {
+                display: none;
+            }
+
+            .card__button__play{
+                margin: 0.5rem 0 0 0 ;
+            }
+        }
+
+        &__buttonproject{
+            margin-top: 2rem;
+            padding: 1rem;
+            font-size: medium;
+            background-color: vars.$primary-color;
+            border-radius: 10px;
+            border: none;
+            color: vars.$primary-text;
+        }
+    }
+  
+}
+@keyframes visibilty {
+    0%   { opacity: 0; }
+    // 50% {opacity: 0.8;}
+    100% { opacity: 1; }
+  }
+@keyframes to-right {
+    0% {transform: translateX(-100vw);}
+    // 50% {transform: translateX(-20vw);}
+    100% {transform: translateX(0);}
+}
+@keyframes to-left {
+    0% {transform: translateX(100vw);}
+    // 50% {transform: translateX(20vw);}
+    100% {transform: translateX(0);}
+}
+@keyframes to-down {
+    0% {transform: translateY(-100vh);}
+    // 50% {transform: translateY(-100vh);}
+    100% {transform: translateY(0);}
+}

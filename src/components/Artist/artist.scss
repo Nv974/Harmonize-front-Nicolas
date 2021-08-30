@@ -1,0 +1,96 @@
+@use '../vars';
+body{
+    background: vars.$primary-black;
+}
+
+.artist{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+    min-height: calc(100vh - 112px) ;
+
+
+    &__header {
+        h1{
+        color: vars.$primary-text;
+        text-align: center;
+        text-decoration: underline;
+        text-decoration-color: #800080;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 10px;
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+        
+        }
+
+        &__picture {
+            width: 12rem;
+            height: 12rem;
+            object-fit: cover;
+        }
+
+        &__profil{
+            color: white;
+        }
+    }  
+    
+    &__profil{
+        height: 12vh;
+        margin: 0 auto;
+        min-width: 60%;
+        max-width: 80%;
+        justify-content: center;
+        align-items: center;
+        background: vars.$secondary-black;
+        color: vars.$primary-text;
+        border: 2px solid rgb(61, 60, 60);
+        border-radius: 1.5rem;
+        display: flex;
+
+        @media screen and (max-width: 320px){
+            width: 310px;
+            height: 30vh;
+        }
+
+        &__img{
+            height: 8rem;
+            margin-left: 1rem;
+            object-fit: cover;
+        }
+
+        &__description{
+            margin: 1rem;
+        }
+    }
+    &__projects{
+        h2{
+            color: vars.$primary-text;
+            margin-left: 2rem;
+            margin-top: 6rem;
+            text-decoration: underline;
+            text-decoration-color: white;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 10px;
+            text-align: center;
+            text-transform: uppercase;
+            
+            @media screen and (max-width: 320px){
+                text-align: center;
+                margin: 6rem auto;
+            }
+
+        }
+        &__cards{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding-top: 1rem;
+            margin: auto;
+            color: vars.$primary-text;
+            margin-bottom: 30px;
+        }
+    }
+}

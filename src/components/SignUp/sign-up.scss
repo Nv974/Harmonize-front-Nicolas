@@ -1,0 +1,146 @@
+
+@use '../vars';
+
+.sign-up{
+    color: black;
+
+    font-family: sans-serif;
+
+    &__container{
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-top: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto 0;
+        height: 100vh;
+        width: 100%;
+
+
+        img{
+            height: 35rem;
+        }
+
+       
+    }
+
+    @media screen and( max-width : 800px) {
+        
+
+        &__form{
+            width: 100vw;
+
+            
+            &__profil{
+                flex-direction: column;
+            }
+
+
+            &__submit{
+                margin: 0 auto;
+            }
+        }
+
+        img{
+            display: none;
+        }
+    }
+
+
+    &__form{
+        background-color: vars.$primary-text;
+        display: flex;
+        flex-direction: column;
+        height: 35rem;
+        padding: 4rem;
+        
+        h2{
+            color: vars.$primary-color;
+            margin: 0 0 1rem 0;
+            position: relative;
+            bottom: 1.5rem;
+            text-align: left;
+            border-bottom: 4px solid black;
+            width: 9.7rem;
+            padding-bottom: 0.3rem;
+        }
+
+        h3{
+            margin: 0.5rem;
+        }
+
+        label{
+            text-align: start;
+            width: 20rem;
+        }
+
+        &__name, &__email, &__password{
+
+            color: black;
+            max-width: 20rem;
+            height: 2.5rem;
+            margin: 0.5rem 0;
+            border: none;
+            border-bottom: rgb(206, 206, 206) 2px solid;
+            transition: 0.2s;
+
+            &:focus{
+                transition: 0.2s;
+                border-bottom: vars.$primary-color 3px solid; 
+            }
+        }
+
+
+        &__description {
+            max-width: 20rem;
+            margin: 0.5rem 0;
+            height: 5rem;
+
+            &:focus{
+                transition: 0.2s;
+                border: vars.$primary-color 3px solid; 
+            }
+        } 
+        
+        &__profil {
+            max-width: 20rem;
+            display: flex;
+        }
+
+        input[type=radio] {
+            width: 3rem;
+            
+        }
+
+        &__submit{
+            position: relative;
+            top: 1rem;
+            width: 7rem;
+            height: 3.5rem;
+            margin: 1.5rem auto 0 auto;
+            border: none;
+            border-radius: 3rem;
+            background-color: vars.$primary-text;
+            font-size: 1rem;
+            background:vars.$primary-color;
+            color: vars.$primary-text;
+            transition: 0.4s;
+
+            &:hover{
+                transition: 0.2s;
+                background: rgb(228, 228, 228);
+                color: vars.$primary-color;              
+            }
+            
+        }
+      
+    }
+}
+.userinfos{
+    .sign-up{
+        img{
+            display: none;
+        }
+    }
+}

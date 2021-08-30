@@ -1,0 +1,270 @@
+@use '../vars';
+
+$gray: #9b9b9b;
+$primary-text: #fff;
+$primary: #800080;
+$secondary: #e900e9;
+
+.project{
+    background: vars.$primary-black;
+    color:vars.$primary-text;
+    padding-bottom: 0.5em;
+    padding-top: 5em;
+    margin: 0 1rem;
+    min-height: calc(100vh - 112px);
+
+    &__update{
+        padding-top: 5em;
+    }
+    &__infos{
+        display: flex;
+        /*min-height: 40vh;
+        justify-content: left;
+        align-items: flex-end;
+        margin-left: 2em;
+        margin-bottom: 2.8rem;*/
+        // min-height: 40vh;
+        // justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        // margin: auto;
+        margin: 3rem auto 2.8rem auto;
+        max-width: 70%;
+
+        &__top{
+            min-width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+
+        }
+
+        &__bottom{
+            min-width: 100%;
+        }
+
+        &__description {
+            margin: 1em 0 0 0;
+            background: vars.$secondary-black;
+            color: vars.$primary-text;
+            border: 2px solid rgb(61, 60, 60);
+            border-radius: 30px;
+            // min-width: 40rem;
+
+            // @media screen and (max-width: 1024px){
+            //     min-width: auto;
+            // }
+
+            &__title{
+                text-decoration: underline;
+                margin-top: 2rem;
+                margin-bottom: 0;
+            }
+
+            &__text{
+                padding: 2rem 2rem;
+                margin-top: 0;
+            }
+        }
+       
+        &__img{
+            margin: 2em;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+        &__text{
+            margin: 2em;
+            text-align: left;
+            
+            &__name{
+                color : vars.$primary-color;
+                font-size: 2em;
+                border-bottom: vars.$primary-color 1px solid;
+            }
+        }
+    }
+    &__modify{
+        color: white;
+        background: purple;
+        border: none;
+        font-size: 17px;
+        border-radius: 5px;
+        display: block;
+        margin-top: 10px;
+        &:hover {
+            font-size: 19px;
+        }
+    }
+    &__description{
+        width: 80%;
+        padding-bottom: 2em;
+        margin:3em auto;
+        justify-self: center;
+    }
+}
+
+.project__update{
+    width: 70%;
+    margin:2em auto;
+    padding:0 4em;
+    border: 2px solid vars.$primary-color;
+    border-radius: 10px;
+    &__field{
+        padding:1em;
+        text-align: left;
+        margin-top: 1em;
+    }
+    &__title{
+        color: vars.$primary-text;
+        font-weight: bold;
+        text-shadow: vars.$primary-color 1px 0 10px;
+        font-size: 2em;
+        margin: 2em 0;
+    }
+}
+
+.new__project__form__submit{
+        margin: 3em;
+        background: none;
+        color: inherit;
+        border: none;
+        padding: 0;
+        font: inherit;
+        cursor: pointer;
+        outline: inherit;
+
+        background: vars.$primary-color;
+        color: vars.$primary-text;
+        border: none;
+        border-radius: 50%;
+        width: 4em;
+        height: 4em;
+        box-shadow: 0px 0px 10px vars.$primary-color ;
+        font-size: 12px;
+        font-weight: 900;
+}
+
+.field__nameToUpdate, .field__updateDescription {
+    position: relative;
+    padding: 15px 0 0;
+    margin-top: 10px;
+    width: 50%;
+    background-color: none;
+    & > input{
+        font-family: inherit;
+        width: 100%;
+        border: 0;
+        border-bottom: 2px solid $gray;
+        outline: 0;
+        font-size: 1rem;
+        color: vars.$primary-text;
+        padding: 7px 0;
+        background: transparent;
+        transition: border-color 0.2s;
+    
+        &::placeholder {
+        color: transparent;
+        }
+    
+        &:placeholder-shown {
+            ~ label {
+            font-size: 1.3rem;
+            cursor: text;
+            top: 20px;
+            }
+        }
+    }
+     label {
+        position: absolute;
+        top: 0;
+        display: block;
+        transition: 0.2s;
+        font-size: 1rem;
+        color: $gray;
+        /* background: linear-gradient(to right, $secondary,$primary);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent; */
+    }
+    & > input:focus {
+        ~ label {
+          position: absolute;
+          top: 0;
+          display: block;
+          transition: 0.2s;
+          font-size: 1rem;
+          color: $primary;
+          font-weight:700;    
+        }
+        padding-bottom: 6px;  
+        font-weight: 700;
+        border-width: 3px;
+        border-image: linear-gradient(to right, $primary,$secondary);
+        border-image-slice: 1;
+    }
+    & > input{
+        &:required,&:invalid { box-shadow:none; }
+    }
+}
+
+.field__updateProjectGenre{
+    padding: 0;
+    margin: 2em 0;
+    & label {
+        color: $gray;
+        display: block;
+        margin-bottom: 0.5em;
+    }
+    & select {
+        background-color: transparent;
+        color: $gray;
+    }
+    & select:focus {
+        border-color: $primary;
+    }
+    & option {
+        background-color: black;
+        color: $gray;
+    }
+}
+
+.project__edit__modify{
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0 1em;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+
+    color: vars.$primary-text;
+    border: none;
+    border-radius: 1em;
+    height: 4em;
+    box-shadow: 0px 0px 5px vars.$primary-color ;
+    font-size: 12px;
+    font-weight: 900;
+}
+
+.project__edit__delete{
+    margin-top: 2em;
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0 1em;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+
+    color: vars.$primary-text;
+    border: none;
+    border-radius: 1em;
+    height: 4em;
+    box-shadow: 0px 0px 5px vars.$primary-color ;
+    font-size: 12px;
+    font-weight: 900;
+}
+
+.project__edit{
+    margin-top: 2em;
+}

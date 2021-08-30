@@ -1,0 +1,25 @@
+@use '../vars';
+
+
+.loading{
+   width: 10em;
+   height: 10em;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   &__icon{
+       height: 4em;
+       width: 4em;
+       color: vars.$primary-color;
+       animation: spin 2s linear -1s infinite;
+   }
+}
+
+@keyframes spin { 
+  
+        0%{transform: rotate(0deg);} 
+        50%{transform: rotate(270deg);} 
+       100%{ transform: rotate(360deg);} 
+   
+}

@@ -1,0 +1,154 @@
+@use '../vars';
+
+$gray: #9b9b9b;
+$primary-text: #fff;
+$primary: #800080;
+$secondary: #e900e9;
+
+
+
+
+
+.new__project__form{
+    width: 70%;
+    margin:2em auto;
+    padding:0 4em;
+    border: 2px solid vars.$primary-color;
+    border-radius: 10px;
+    &__field{
+        padding:1em;
+        text-align: left;
+        margin-top: 1em;
+    }
+    &__title{
+        color: vars.$primary-text;
+        font-weight: bold;
+        text-shadow: vars.$primary-color 1px 0 10px;
+        font-size: 2em;
+        margin: 2em 0;
+    }
+
+    &__mentions{
+        font-size: 14px;
+        color: $gray;
+    }
+}
+
+.new__project__form__submit{
+        margin: 3em;
+        background: none;
+        color: inherit;
+        border: none;
+        padding: 0;
+        font: inherit;
+        cursor: pointer;
+        outline: inherit;
+
+        background: vars.$primary-color;
+        color: vars.$primary-text;
+        border: none;
+        border-radius: 50%;
+        width: 4em;
+        height: 4em;
+        box-shadow: 0px 0px 10px vars.$primary-color ;
+        font-size: 12px;
+        font-weight: 900;
+}
+
+.field__newProjectName, .field__newProjectDescription {
+    position: relative;
+    padding: 15px 0 0;
+    margin-top: 10px;
+    width: 50%;
+    background-color: none;
+    & > input{
+        font-family: inherit;
+        width: 100%;
+        border: 0;
+        border-bottom: 2px solid $gray;
+        outline: 0;
+        font-size: 1rem;
+        color: vars.$primary-text;
+        padding: 7px 0;
+        background: transparent;
+        transition: border-color 0.2s;
+    
+        &::placeholder {
+        color: transparent;
+        }
+    
+        &:placeholder-shown {
+            ~ label {
+            font-size: 1.3rem;
+            cursor: text;
+            top: 20px;
+            }
+        }
+    }
+     label {
+        position: absolute;
+        top: 0;
+        display: block;
+        transition: 0.2s;
+        font-size: 1rem;
+        color: $gray;
+        /* background: linear-gradient(to right, $secondary,$primary);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent; */
+    }
+    & > input:focus {
+        ~ label {
+          position: absolute;
+          top: 0;
+          display: block;
+          transition: 0.2s;
+          font-size: 1rem;
+          color: $primary;
+          font-weight:700;    
+        }
+        padding-bottom: 6px;  
+        font-weight: 700;
+        border-width: 3px;
+        border-image: linear-gradient(to right, $primary,$secondary);
+        border-image-slice: 1;
+    }
+    & > input{
+        &:required,&:invalid { box-shadow:none; }
+    }
+}
+
+.field__newProjectGenre{
+    padding: 0;
+    margin: 2em 0;
+    & label {
+        color: $gray;
+        display: block;
+        margin-bottom: 0.5em;
+    }
+    & select {
+        background-color: transparent;
+        color: $gray;
+    }
+    & select:focus {
+        border-color: $primary;
+    }
+    & option {
+        background-color: black;
+        color: $gray;
+    }
+}
+
+.upload__form{
+    & label {
+        color: $gray;
+        margin-bottom: 0.5em;
+        margin-right: 1em;
+    }
+    & input {
+        color: $gray;
+    }
+    & div {
+        display: block;
+        margin: 2em 0;
+    }
+}

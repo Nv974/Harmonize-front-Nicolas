@@ -1,0 +1,38 @@
+@use '../../vars';
+
+
+.mentions{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: vars.$primary-text;
+    
+    &__block {
+        background: rgba(34, 33, 33, 0.671);
+        max-width: 40rem;
+        padding: 20px;
+    }
+
+    p {
+        text-align: justify;
+        line-height: 1.5;
+    }
+
+    a{
+        background: vars.$primary-color;
+        padding: 5px;
+        border-radius: 5px;
+        font-weight: bold;
+        color: vars.$primary-text;
+    }
+
+    a:hover{
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 18px;
+        color: vars.$primary-text;
+    }
+}

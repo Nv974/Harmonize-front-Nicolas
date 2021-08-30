@@ -1,0 +1,121 @@
+@use '../vars';
+
+
+.projects{
+    background: vars.$primary-black;
+    color : vars.$primary-text;
+
+    &__filters{
+        position: relative;
+        bottom: 3rem;
+        display: flex;
+        width: 95%;
+        margin: 0 auto ;
+        flex-wrap: wrap;
+
+        &__select{
+            width: fit-content;
+            padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+            background:none;
+            cursor: pointer;
+            border-radius: 5px;
+            // line-height: 2rem;
+            // transition: 1s;
+            border: 1px solid;
+            border-color: vars.$primary-color;
+            color: vars.$primary-text;
+            margin-top: 0.5rem ;
+
+            option{
+                background-color: vars.$primary-black;
+                border: none;
+            }
+
+        }
+
+        &__genre{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;  
+                 
+
+            &__title{
+                position: relative;
+                top: -3rem;
+                width: 95%;
+                margin: 0 auto ;
+                font-size: 0.8rem;
+            }
+
+            &__filter{
+                margin-right: 2rem;
+                width: fit-content;
+                padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+                background:none;
+                cursor: pointer;
+                border-radius: 5px;
+                // line-height: 2rem;
+                // transition: 1s;
+                border: 1px solid;
+                border-color: vars.$primary-color;
+                color: vars.$primary-text;
+                margin-top: 0.5rem ;
+
+
+                option{
+                    background-color: vars.$primary-black;
+                    border: none;
+            }
+            }
+
+            &__title{
+                text-align: start;
+            }
+
+            
+        }
+
+    }
+
+    &__header{
+        font-size: 1.4rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        background-repeat: no-repeat;
+        background-position: center;
+        padding-top: 10rem;
+        margin-bottom: 5rem;
+        text-transform: uppercase;
+        // background-color: vars.$secondary-black;
+        background-image: url(../../../src/assets/img/background/old-wrinkled-hands-on-piano.jpg);
+        background-size: cover;
+
+        &__title{
+            margin-bottom: 10rem;
+            text-decoration: underline;
+            text-decoration-color: vars.$primary-color;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 10px;
+        }
+
+
+
+        
+       
+
+
+    
+    }
+    &__list{
+        display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    padding: 10px;
+    flex-wrap: wrap;
+
+   
+    }
+}
+

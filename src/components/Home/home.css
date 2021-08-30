@@ -1,0 +1,59 @@
+body{
+    overflow-x: hidden;
+}
+
+.home__header{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../../assets/img/background/old-wrinkled-hands-on-piano.jpg);
+   background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.home__background{
+    width: 100vw;
+    max-height: 100%;
+    position: absolute;
+    z-index: -1;
+}
+.home__content{
+    max-width: 60%;
+    text-align: left;
+    color :white;
+}
+.home__title{
+    color:purple;
+    font-size:2em;
+    margin-bottom: 1em;
+    font-weight: bold;
+}
+.home__middle{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../../assets/img/background/on-wooden-table-there-are-musical-keys-acoustic-guitar-bass-guitar-sound-mixer-headphones-computer-and-drum-sticks.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.home__project{
+    height: 100vh;
+    background:#1B1B1B;
+    color:white;
+}
+.home__project__title{
+    padding:5% 0;
+    width: 100%;
+    font-size: 2em;
+    font-weight: bold;
+}
+.home__project__cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin:0 auto;
+}

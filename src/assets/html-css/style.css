@@ -1,0 +1,80 @@
+body {
+font-family: "system-ui", sans-serif;
+background-color: #2A2A2A;
+color: white;
+}
+
+.navbar {
+    font-family: "system-ui", sans-serif;
+    background-color: #1B1B1B;
+    font-size: large;
+}
+
+.nav-link {
+    color: white;
+}
+
+.active {
+    color: violet;
+}
+
+.navbar-brand {
+    font-family: "system-ui", sans-serif;
+    color: purple;
+}
+
+.container-head {
+    background: no-repeat center url(https://picsum.photos/200);
+    
+    background-size: 100%;
+    padding: 15%;
+    height: 100vh;
+}
+
+.purple {
+    color: purple;
+}
+
+
+
+.container-second {
+    padding: 5% 10%;
+    height: 100vh;
+    background-color: #1B1B1B;
+}
+
+.card {
+    background-color: transparent;
+    color: white;
+    border: solid 1px purple;
+}
+
+.card-footer {
+    border-top: solid 1px purple;
+}
+
+.card-img-top {
+    border-bottom: solid 1px purple;
+}
+
+/* .card-body {
+    color: #1B1B1B ;
+} */
+
+.container-fourth {
+    padding: 5% 10%;
+    height: 100vh;
+    background-color: #1B1B1B;
+}
+
+.container-third {
+    background: no-repeat center url(./src/studio-2677975_1920.jpg);
+    background-size: 100%;
+    padding: 10%;
+    height: 100vh;
+}
+
+.footer {
+    padding: 5%;
+
+}
