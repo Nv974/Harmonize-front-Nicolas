@@ -276,7 +276,6 @@ export default (store) => (next) => (action) => {
         .then(response => {store.dispatch(getProjectsList(response.data));
         })
           .catch((error) => console.log(error));
-          // store.dispatch(openPopUp("alert","Une erreur s'est produite","Oops"))
         axios.get("http://ec2-3-84-168-178.compute-1.amazonaws.com/api/v1/projects/hottest")
         .then(response =>{
           // console.log(response)

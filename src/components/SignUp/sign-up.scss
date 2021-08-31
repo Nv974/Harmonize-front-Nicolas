@@ -54,6 +54,11 @@
         flex-direction: column;
         height: 35rem;
         padding: 4rem;
+
+        &__confirm-infos{
+            color: red;
+            position: absolute;
+        }
         
         h2{
             color: vars.$primary-color;
@@ -75,7 +80,7 @@
             width: 20rem;
         }
 
-        &__name, &__email, &__password{
+        &__name, &__email, &__password, &__confirmation{
 
             color: black;
             max-width: 20rem;

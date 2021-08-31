@@ -37,17 +37,7 @@ const Player = ({songToPlay,setPlaying,isPlaying,nameSongToPlay,nameUserSongToPl
         track.currentTime = event;        
     }
 
-    const timeUpdate = () =>{
-        const timer = document.querySelector('#timer')
-        const track = document.querySelector('audio');
-        timer.value = track.currentTime
-        timer.max = track.duration
-        if(track.currentTime === track.duration){
-            setStateDuration(0)
-            setPlaying(false)
-
-        }
-    }
+    
 
 
     const showPlayer = () => {
@@ -63,6 +53,17 @@ const Player = ({songToPlay,setPlaying,isPlaying,nameSongToPlay,nameUserSongToPl
         const minimizer = document.querySelector('.player__minimize__toggle')
         minimizer.classList.toggle('open')
     }
+
+    const timeUpdate = () => {
+      const timer = document.querySelector("#timer");
+      const track = document.querySelector("audio");
+      timer.value = track.currentTime;
+      timer.max = track.duration;
+      if (track.currentTime === track.duration) {
+        setStateDuration(0);
+        setPlaying(false);
+      }
+    };
 
 
     return(

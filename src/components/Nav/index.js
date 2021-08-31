@@ -5,7 +5,6 @@ import logo from '../../assets/img/logo/logo_small_icon_only-color.png';
 import LoginForm from '../../containers/LoginForm';
 
 import './nav.scss'
-import { createPortal } from 'react-dom';
 
 const Nav = ({isLogged,isResponsive, setResponsiveOn, setResponsiveOff }) => {
   const [moveNav,setMoveNav] = useState("fixed");
